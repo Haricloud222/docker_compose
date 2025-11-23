@@ -1,0 +1,38 @@
+install docker
+start and enabled the docker
+check the docker version
+install the docker compose curl
+--sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+check compose version
+---docker-compose --version
+give permission read write
+---sudo chmod +x /usr/local/bin/docker-compose
+Create Project Directory
+---mkdir wordpress-docker
+   cd wordpress-docker
+
+Create docker-compose.yml
+----vim docker-compose.yml
+
+Start the Application
+--docker-compose up -d
+
+Check Running Containers
+--docker ps
+
+View Logs
+---docker-compose logs -f
+
+Stop Containers
+--docker-compose down
+
+Remove Everything (including volumes)
+--docker-compose down -v
+
+Rebuild containers
+---docker-compose up -d --build
+
+Real-Time Example: Deploy WordPress
+---docker-compose up -d
+
+check with ip address
